@@ -1,0 +1,19 @@
+form {
+    align-items: inherit;
+    align-content: center;
+    background-color: aquamarine;
+    display: inline-lex;
+    flex: inherit;
+    border: white solid;
+}
+
+
+button{
+    padding:0%;
+    margin-top: auto;
+    background-color: aqua;
+}
+
+body{
+    background-color: #FFD4F8;
+}
