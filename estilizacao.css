@@ -1,19 +1,50 @@
 form {
     align-items: inherit;
     align-content: center;
-    background-color: aquamarine;
+    background-color:#FFD4F8;
     display: inline-lex;
     flex: inherit;
-    border: white solid;
-}
+    border-radius: 10px ;
+    display: inline-block;
+position: relative;
 
 
 button{
-    padding:0%;
-    margin-top: auto;
-    background-color: aqua;
+    padding:10px;
+    margin-top:after 10%;
+    background-color: rgb(17, 255, 0);
 }
 
 body{
     background-color: #FFD4F8;
+position: absolute;
+text-align: center;
+   color: #FFD4F8;
 }
+
+div{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+
+}
+
+h1{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+label{
+    border-radius: 10px;
+    justify-content: center;
+
+}
+
+.container img {
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto
+
