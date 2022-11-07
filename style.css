@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    background-color: #FFD4F8;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1280px;
+    flex-wrap: nowrap;
+    padding: 1rem;
+}
+
+.nav-user-panel {
+    margin-top: 50px;
+}
+
+.nav-user-panel ul{
+    list-style-type: none;
+}
+
+.meus-pedidos {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-lista-pedidos {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fff;
+
+    box-shadow: 5px 5px rgb(122, 112, 112)
+}
+
+.numero-pedido, .status-pedido, .data-pedido, .pagamento-pedido{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+img#teen-titans{
+    height: 50%;
+    width: 50%;
+}
