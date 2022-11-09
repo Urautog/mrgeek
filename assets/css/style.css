@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  background-color: #ffd4f8;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0px auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1280px;
+  flex-wrap: nowrap;
+  padding: 1rem;
+}
+
+.nav-user-panel {
+  margin-top: 50px;
+}
+
+.nav-user-panel ul {
+  list-style-type: none;
+}
+
+.filtro-pedidos {
+  align-self: flex-start;
+}
+
+.item-lista {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: .5rem auto;
+  background-color: #fff;
+  transition: 0.5s all;
+}
+
+.item-lista:hover {
+  box-shadow: 5px 5px rgb(122, 112, 112);
+}
+
+.nav-user-panel {
+  /* margin-left: -100px; */
+}
+
+.numero-pedido,
+.status-pedido,
+.data-pedido,
+.pagamento-pedido {
+  display: flex;
+  flex-direction: column;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  color: #1ed08c;
+  font-size: 2rem;
+}
+
+.item-lista div span:first-child {
+  font-weight: bold;
+}
+
+img#teen-titans {
+  height: 50%;
+  width: 50%;
+}
+
+.meus-dados {
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+  width: 100%;
+}
+
+.enderecos {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-content: center;
+  margin: 0px 50px 10px auto;
+}
+
+.dados-pessoais {
+  display: flex;
+  width: 100%;
+}
+
+.dados-pessoais form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px auto 10px 50px;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.dados-pessoais form > input,
+.dados-pessoais form > select {
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 5px 5px rgb(122, 112, 112);
+  padding: 10px;
+  width: 75%;
+}
+
+.dados-pessoais form .botoes {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  gap: 30px;
+  align-content: space-between;
+}
+
+.btn-verde-animado {
+  background-color: #1ed08c;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 1rem;
+  padding: 10px;
+  width: 75%;
+  transition: 0.3s all;
+  margin-top: 10px;
+}
+
+.btn-verde-animado:hover {
+  box-shadow: 5px 5px rgb(122, 112, 112);
+  cursor: pointer;
+}
+
+.enderecos > input {
+  align-self: center;
+  width: 50%;
+}
