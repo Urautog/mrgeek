@@ -7,7 +7,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-main {
+body {
   background-color: #ffd4f8;
 }
 
@@ -16,6 +16,7 @@ main {
   justify-content: center;
   max-width: 1280px;
   margin: 0px auto;
+  
 }
 
 .container {
@@ -39,6 +40,16 @@ main {
   align-self: flex-start;
 }
 
+.seletor-filtros {
+  background-color: #1ed08c;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  padding: 10px;
+  width: 20%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 .item-lista {
   display: flex;
   width: 100%;
@@ -50,17 +61,13 @@ main {
   border: 2px solid black;
   border-radius: 10px;
   padding: 1rem;
-  margin: .5rem auto;
+  margin: 0.5rem auto;
   background-color: #fff;
   transition: 0.5s all;
 }
 
 .item-lista:hover {
   box-shadow: 5px 5px rgb(122, 112, 112);
-}
-
-.nav-user-panel {
-  /* margin-left: -100px; */
 }
 
 .numero-pedido,
@@ -151,4 +158,36 @@ img#teen-titans {
 .enderecos > input {
   align-self: center;
   width: 50%;
+}
+
+.descricao-favorito {
+  width: 50%;
+  align-self: center;
+  text-align: justify;
+}
+
+.valor-favorito {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  width: 20%;
+}
+
+.valor-favorito > span {
+font-size: 1.5rem;
+}
+
+.btn-verde {
+  background-color: #1ed08c;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 1rem;
+  padding: 10px;
+  width: 75%;
+  margin-top: 10px;
+}
+
+.btn-verde:hover {
+  cursor: pointer;
 }
