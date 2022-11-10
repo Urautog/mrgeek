@@ -9,6 +9,10 @@
 
 body {
   background-color: #ffd4f8;
+  background-image: url("file:///G:/RAKE/CursoDH/mrgeek/assets/img/Dragon.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 400px;
 }
 
 .main-container {
@@ -16,7 +20,6 @@ body {
   justify-content: center;
   max-width: 1280px;
   margin: 0px auto;
-  
 }
 
 .container {
@@ -26,6 +29,7 @@ body {
   max-width: 1280px;
   flex-wrap: nowrap;
   padding: 1rem;
+  width: 80%;
 }
 
 .nav-user-panel {
@@ -175,7 +179,7 @@ img#teen-titans {
 }
 
 .valor-favorito > span {
-font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .btn-verde {
@@ -190,4 +194,51 @@ font-size: 1.5rem;
 
 .btn-verde:hover {
   cursor: pointer;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.login > .tela-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.tela-login form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 10px auto;
+  width: 100%;
+  align-items: center;
+}
+
+.tela-login div.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 70%;
+}
+
+.tela-login form > input {
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 5px 5px rgb(122, 112, 112);
+  padding: 10px;
+  width: 80%;
+}
+
+.tela-login form > input:focus {
+  border: 8px solid #1ed08c;
+}
+
+#dragon {
+  width: 25%;
+  right: 100px;
+  top: 0px;
 }
