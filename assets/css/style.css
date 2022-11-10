@@ -9,7 +9,10 @@
 
 body {
   background-color: #ffd4f8;
-  background-image: url("file:///G:/RAKE/CursoDH/mrgeek/assets/img/Dragon.png");
+}
+
+.bg-dragon {
+  background-image: url("file:///G:/RAKE/CursoDH/mrgeek/assets/img/dragon.svg");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 400px;
