@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;400;700&family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    text-decoration: none;
+    background-color: #FFD4F8;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%;
+    
+}
+
+div a img {
+    width: 100%;   
+}
+
+.card-body{
+    justify-content: center;
+    align-items: center;
+    padding-left: 25%;
+}
+
+.card-deck {
+    padding-top: 10px;
+    border-radius: 100px;
+}
+
+.carrossel {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+#preco {
+    
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 25%;
+
+
