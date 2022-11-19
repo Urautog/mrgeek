@@ -15,7 +15,7 @@ body {
   background-image: url("file:///G:/RAKE/CursoDH/mrgeek/assets/img/dragon.svg");
   background-repeat: no-repeat;
   background-position: right top;
-  background-size: 400px;
+  background-size: 300px;
 }
 
 .main-container {
@@ -96,8 +96,13 @@ body {
 }
 
 img#teen-titans {
-  height: 50%;
-  width: 50%;
+  height: 40%;
+  width: 40%;
+}
+
+img#adventure-time {
+  height: 80%;
+  width: 80%;
 }
 
 .meus-dados {
