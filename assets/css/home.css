@@ -22,15 +22,21 @@ div a img {
     width: 100%;   
 }
 
+.card {
+    border-radius: 20px;
+}
+
 .card-body{
     justify-content: center;
     align-items: center;
-    padding-left: 25%;
+    text-align: center;
+    border-radius: 20px;
 }
 
 .card-deck {
     padding-top: 10px;
     border-radius: 100px;
+    border-radius: 20px;
 }
 
 .carrossel {
@@ -47,6 +53,43 @@ div a img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding-left: 25%;
+    text-align: center;
+border-radius: 50px;}
 
+.card-img-top{
+    border-radius: 20px
+}
 
+.row img{
+    width: 200px;
+    padding: 20px 20px;
+}
+
+.row {
+    background-color: #FF00C8;
+}
+
+.container {
+    box-shadow: 10px black;
+}
+
+a {
+    color: #f8f9fa;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.bg-dark {
+    background-color: #FF00C8!important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1ED08C;
+    border-color: #1ED08C;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
