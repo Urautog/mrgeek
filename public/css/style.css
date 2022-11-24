@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;400;700&family=Inter&display=swap');
+
 
 * {
   margin: 0px;
@@ -249,4 +252,101 @@ img#adventure-time {
   width: 25%;
   right: 100px;
   top: 0px;
+}
+
+
+/* INCLUSÃO CSS HOME */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    text-decoration: none;
+    background-color: #FFD4F8;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%;
+    
+}
+
+div a img {
+    width: 100%;   
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.card-body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.card-deck {
+    padding-top: 10px;
+    border-radius: 100px;
+    border-radius: 20px;
+}
+
+.carrossel {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+#preco {
+    
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+border-radius: 50px;}
+
+.card-img-top{
+    border-radius: 20px
+}
+
+.row img{
+    width: 200px;
+    padding: 20px 20px;
+}
+
+.row {
+    background-color: #FF00C8;
+}
+
+.container {
+    box-shadow: 10px black;
+}
+
+a {
+    color: #f8f9fa;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.bg-dark {
+    background-color: #FF00C8!important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1ED08C;
+    border-color: #1ED08C;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
 }
