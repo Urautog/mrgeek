@@ -79,14 +79,14 @@ a {
     background-color: transparent;
 }
 
-.bg-dark {
+.bg-pink {
     background-color: #FF00C8!important;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #1ED08C;
-    border-color: #1ED08C;
+    background-color: #1ed08c;
+    border-color: #1ed08c;
 }
 
 form {

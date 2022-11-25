@@ -42,14 +42,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <link rel="stylesheet" href="../public/css/style.css" />
-    <title>Mr. Geek | Login</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Mr. Geek | Meus Pedidos</title>
   </head>
-  <body class="bg-dragon">
+  <body class="bg-light-pink">
     <!--bot navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg bg-pink">
       <a class="navbar-brand" href="#">
-        <img src="../public/img/MrGeek (2).png" alt="" width="70px" />
+        <img src="../assets/img/MrGeek (2).png" alt="" width="70px" />
       </a>
       <button
         class="navbar-toggler"
@@ -92,41 +92,108 @@
     <!--bot navbar-->
 
     <main class="main-container">
-      <section class="container login-page">
-        <h1>LOGIN</h1>
-        <section class="login">
-          <section class="tela-login">
-            <form action="#">
-              <input type="email" name="email" id="" placeholder=" E-mail" />
-              <input type="password" name="senha" placeholder=" Senha" />
+      <section class="container">
+        <h1>MEUS PEDIDOS</h1>
 
-              <div class="botoes">
-                <input class="btn-verde-animado" type="button" value="Entrar" />
-                <input
-                  class="btn-verde-animado"
-                  type="button"
-                  value="Cadastre-se"
-                />
-                <input
-                  class="btn-verde-animado"
-                  type="button"
-                  value="Esqueci minha senha"
-                />
-              </div>
-            </form>
-          </section>
-        </section>
+        <select
+          name="filtro-pedidos"
+          class="filtro-pedidos seletor-filtros"
+          id=""
+        >
+          <option value="" selected disabled>Filtrar por</option>
+          <option value="Todos">Todos</option>
+          <option value="Concluído">Concluído</option>
+          <option value="Cancelado">Cancelado</option>
+          <option value="Pendente">Pendente</option>
+        </select>
+
+        <article class="item-lista">
+          <div class="numero-pedido">
+            <span>Número do pedido</span>
+            <span>#1234567890</span>
+          </div>
+          <div class="status-pedido">
+            <span>Status</span>
+            <span>Concluído</span>
+          </div>
+          <div class="data-pedido">
+            <span>Data</span>
+            <span>10/10/2022</span>
+          </div>
+          <div class="pagamento-pedido">
+            <span>Pagamento</span>
+            <span>Boleto Bancário</span>
+          </div>
+        </article>
+
+        <article class="item-lista">
+          <div class="numero-pedido">
+            <span>Número do pedido</span>
+            <span>#1234567890</span>
+          </div>
+          <div class="status-pedido">
+            <span>Status</span>
+            <span>Concluído</span>
+          </div>
+          <div class="data-pedido">
+            <span>Data</span>
+            <span>10/10/2022</span>
+          </div>
+          <div class="pagamento-pedido">
+            <span>Pagamento</span>
+            <span>Boleto Bancário</span>
+          </div>
+        </article>
+
+        <article class="item-lista">
+          <div class="numero-pedido">
+            <span>Número do pedido</span>
+            <span>#1234567890</span>
+          </div>
+          <div class="status-pedido">
+            <span>Status</span>
+            <span>Concluído</span>
+          </div>
+          <div class="data-pedido">
+            <span>Data</span>
+            <span>10/10/2022</span>
+          </div>
+          <div class="pagamento-pedido">
+            <span>Pagamento</span>
+            <span>Boleto Bancário</span>
+          </div>
+        </article>
+
+        <article class="item-lista">
+          <div class="numero-pedido">
+            <span>Número do pedido</span>
+            <span>#1234567890</span>
+          </div>
+          <div class="status-pedido">
+            <span>Status</span>
+            <span>Concluído</span>
+          </div>
+          <div class="data-pedido">
+            <span>Data</span>
+            <span>10/10/2022</span>
+          </div>
+          <div class="pagamento-pedido">
+            <span>Pagamento</span>
+            <span>Boleto Bancário</span>
+          </div>
+        </article>
+        <img id="teen-titans" src="../assets/img/teen-titans.svg" alt="" />
       </section>
     </main>
 
-    <footer class="bg-dark text-white py-4">
-      <div class="container">
-        <nav class="row">
+    <footer class="bg-pink text-white py-4">
+      <div style="width: 100%" class="container">
+        <nav style="width: 100%" class="row">
           <a
             href="#"
             class="col-3 text-reset text-uppercase d-flex align-itens-center"
             ><img
-              src="../public/img/MrGeek (2).png"
+              src="../assets/img/MrGeek (2).png"
               alt="Logo MRGeek"
               class="img-logo imr-2"
           /></a>
