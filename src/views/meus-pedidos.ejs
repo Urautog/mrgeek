@@ -46,50 +46,8 @@
     <title>Mr. Geek | Meus Pedidos</title>
   </head>
   <body class="bg-light-pink">
-    <!--bot navbar-->
-    <nav class="navbar navbar-expand-lg bg-pink">
-      <a class="navbar-brand" href="#">
-        <img src="../assets/img/MrGeek (2).png" alt="" width="70px" />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02"
-        aria-expanded="false"
-        aria-label="Alterna navegação"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <%- include("./partials/header") %>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(Página atual)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Desativado</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Pesquisar"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Pesquisar
-          </button>
-        </form>
-      </div>
-    </nav>
-    <!--bot navbar-->
 
     <main class="main-container">
       <section class="container">
@@ -186,76 +144,7 @@
       </section>
     </main>
 
-    <footer class="bg-pink text-white py-4">
-      <div style="width: 100%" class="container">
-        <nav style="width: 100%" class="row">
-          <a
-            href="#"
-            class="col-3 text-reset text-uppercase d-flex align-itens-center"
-            ><img
-              src="../assets/img/MrGeek (2).png"
-              alt="Logo MRGeek"
-              class="img-logo imr-2"
-          /></a>
+    <%- include("./partials/footer") %>
 
-          <!--menu-->
-          <ul class="col-3 list-unstyled">
-            <li class="font-weight-bold text-uppercase">
-              INFORMAÇÕES DA EMPRESA
-            </li>
-            <li><a href="#" class="text-reset">Sobre MrGeek</a></li>
-            <li><a href="#" class="text-reset">Endereço</a></li>
-            <li><a href="#" class="text-reset">Responsabilidade local</a></li>
-          </ul>
-          <!--menu-->
-          <ul class="col-3 list-unstyled">
-            <li class="font-weight-bold text-uppercase">AJUDA E SUPORTE</li>
-            <li><a href="#" class="col-3text-reset">Politica de frete</a></li>
-            <li><a href="#" class="text-reset">Devolução</a></li>
-            <li><a href="#" class="text-reset">Como pedir</a></li>
-            <li><a href="#" class="text-reset">Como rastrear</a></li>
-            <li><a href="#" class="text-reset">Guia de tamanhos</a></li>
-            <li><a href="#" class="text-reset">Contate-nos</a></li>
-            <li><a href="#" class="text-reset">Metodo de pagamento</a></li>
-          </ul>
-          <!--Redes Sociais-->
-          <ul class="col-3 list-unstyled">
-            <li class="font-weight-bold text-uppercase">REDES SOCIAIS</li>
-            <li>
-              <!--FB-->
-              <a href="#" class="text-reset"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-              <!--Twitter-->
-              <a href="#" class="text-reset"
-                ><i class="fa-brands fa-twitter"></i
-              ></a>
-              <!--Instagram-->
-              <a href="#" class="text-reset"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <!--Pinterest-->
-              <a href="#" class="text-reset"
-                ><i class="fa-brands fa-pinterest-p"></i
-              ></a>
-            </li>
-            <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Cadastre-se para receber notificações</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">Inscreva-se</button>
-            </form>
-          </ul>
-        </nav>
-      </div>
-    </footer>
   </body>
 </html>

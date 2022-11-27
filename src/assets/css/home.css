@@ -93,3 +93,19 @@ form {
     display: block;
     margin-top: 0em;
 }
+
+/* INCLUSÃO CSS - RODRIGO RIBEIRO*/
+
+.navbar::before {
+    content: "";
+    background-color: #1ed08c;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar-brand {
+    z-index: 9999;
+  }
