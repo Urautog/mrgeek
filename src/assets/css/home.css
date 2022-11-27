@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;400;700&family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    text-decoration: none;
+    background-color: #FFD4F8;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%;
+    
+}
+
+div a img {
+    width: 100%;   
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.card-body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.card-deck {
+    padding-top: 10px;
+    border-radius: 100px;
+    border-radius: 20px;
+}
+
+.carrossel {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+#preco {
+    
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+border-radius: 50px;}
+
+.card-img-top{
+    border-radius: 20px
+}
+
+.row img{
+    width: 200px;
+    padding: 20px 20px;
+}
+
+.row {
+    background-color: #FF00C8;
+}
+
+.container {
+    box-shadow: 10px black;
+}
+
+a {
+    color: #f8f9fa;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.bg-pink {
+    background-color: #FF00C8!important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1ed08c;
+    border-color: #1ed08c;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+/* INCLUSÃO CSS - RODRIGO RIBEIRO*/
+
+.navbar::before {
+    content: "";
+    background-color: #1ed08c;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar-brand {
+    z-index: 9999;
+  }
