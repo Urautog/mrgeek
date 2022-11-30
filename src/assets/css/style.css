@@ -15,9 +15,9 @@ body {
 }
 
 .bg-dragon {
-  background-image: url("file:///G:/RAKE/CursoDH/mrgeek/src/assets/img/dragon.svg");
+  background-image: url("../img/dragon.svg");
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: 100% 50%;
   background-size: 300px;
 }
 
@@ -26,12 +26,34 @@ body {
   justify-content: center;
   max-width: 1280px;
   margin: 0px auto;
-  min-height: 500px;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.banner {
+  width: 100%;
+}
+
+.banner-img {
+  max-width: 1280px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0px auto;
+  width: 100%;
 }
 
 .boxed {
   max-width: 1280px;
   margin: auto;
+}
+
+.container-home {
+  width: 100%;
+  box-shadow: 10px black;
 }
 
 .container {
@@ -40,23 +62,10 @@ body {
   flex-direction: column;
   max-width: 1280px;
   flex-wrap: nowrap;
-  padding: 1rem;
-  width: 80%;
+  width: 100%;
   box-shadow: 10px black;
+  justify-items: center;
 }
-
-/* .nav-user-panel {
-  margin-top: 50px;
-}
-
-.nav-user-panel::before {
-  background-color: green;
-  height: 20px;
-}
-
-.nav-user-panel ul {
-  list-style-type: none;
-} */
 
 .navbar::before {
   content: "";
@@ -239,6 +248,10 @@ img#adventure-time {
   width: 100%;
 }
 
+.login-page {
+  height: 876px;
+}
+
 .login > .tela-login {
   display: flex;
   flex-direction: column;
@@ -286,10 +299,6 @@ footer {
 
 /* INCLUSÃO CSS HOME */
 
-div a img {
-  width: 100%;
-}
-
 .card {
   border-radius: 20px;
 }
@@ -310,9 +319,6 @@ div a img {
 .carrossel {
   padding-top: 10px;
   padding-bottom: 50px;
-}
-
-#preco {
 }
 
 .card-body {
@@ -354,7 +360,7 @@ form {
   margin-top: 0em;
 }
 
-/* Custom colors */
+/* --------------- CUSTOM COLORS --------------- */
 .bg-pink {
   background-color: #ff00c8;
 }
@@ -363,44 +369,43 @@ form {
   background-color: #ffd4f8;
 }
 
-@media screen and (max-width: 992px) {
+/* --------------- @MEDIA SCREEN --------------- */
 
-  .item-lista{
-    /* flex-direction: column; */
+@media screen and (max-width: 992px) {
+  .item-lista {
     align-content: center;
     align-items: center;
   }
 
-  .item-lista .lista-img{
+  .item-lista .lista-img {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .valor-favorito{
+  .valor-favorito {
     width: 100%;
   }
 
-  .descricao-favorito{
+  .descricao-favorito {
     width: 100%;
   }
-  .descricao-favorito p{
+  .descricao-favorito p {
     inline-size: 100%;
     overflow: hidden;
   }
 
-  .botoes{
+  .botoes {
     flex-direction: column;
     align-items: center;
   }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   .numero-pedido,
   .status-pedido,
   .data-pedido,
   .pagamento-pedido {
     width: 100%;
   }
-  
 }
