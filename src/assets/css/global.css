@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+:root{
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #0DB172;
+    width: 100%;
+    height: 3rem;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+
+}
+
+.nav a p{
+    margin-right: 2rem;
+    font-weight: 400;
+    text-decoration: none;
+    
+}
+
+
+a {
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    background-color: #FF00C8;
+
+    position: fixed;
+    right: 0;
+    top: 3rem;
+    left: 0;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+
+
+    color: white;
+    text-transform: uppercase;
+}
+
+
+header a {
+    color: inherit;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}  
+
+.icons {
+    margin-right: 3rem;
+    margin-top: 1rem;
+}
+
+.ready, .standards{
+    margin-right: 10rem;
+}
+
+.logo img{
+    cursor: pointer;
+    height: 10rem;
+    margin-left: 3rem;
+}
+
+main {
+    margin: 15rem auto;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    background-color: #FF00C8;
+    color: white;
+    height: 35rem;
+    justify-content: space-between;
+}
+
+footer ul{
+    list-style: none;
+}
+
+.coluna-1{
+    font-weight: 1.2rem;
+}
+
+footer ul li h2{
+    font-weight: 3rem;
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    padding: 1.6rem;
+
+    margin-left: 10rem;
+
+    justify-content: center;
+
+    gap: 1.6rem;
+
+    flex-wrap: wrap;
+}
+
+.card-products {
+    width: 30rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    padding: 2rem;
+
+    border-radius: .8rem;
+
+    transition: .2s all;
+
+    box-shadow: .5rem .5rem .10rem gray;
+
+}
+
+
+.products img{
+    max-height: 30rem;
+    background: #FFFFFF;
+}
+
+main .card-products button {
+    background-color: #FF00C8;
+    color: white;
+    font-weight: bold;
+
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.products h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3.8rem;
+    margin-top: .8rem;
+}
+
+.card-products p {
+    margin-top: 1%;
+    font-weight: bold;
+}
+
+.next-page{
+    margin: 0 0 0 100rem;
+}
+
+img{
+    height: 30rem;
+}
