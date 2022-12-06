@@ -8,25 +8,29 @@
     <link rel="stylesheet" href="estilizacao.css" />
 </head>
 <body>
-    <H1>Cadastre-se</H1>
-    <form> 
-        <br>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome" required>
-        <br>
-        <p></p>
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" placeholder="Digite seu telefone" required>
-            <br>
-            <p></p>
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Digite seu email" required>
-            <br>
-            <p>
-            </p>
-            <label for="estado">Estado</label>
-            <select name="estado" id="estado" required>
-                <option selected disabled>Selecione</option>
+    <main class="container">
+        <form class="cadastro">
+            <h1>Cadastro</h1>
+
+            <div class="input-wrapper">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="tel">Telefone</label>
+                <input type="text" name="tel" id="tel">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="departments">Estado</label>
+                <select name="departments" id="departments">
+                    <option selected disabled>Selecione uma opção</option>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
                 <option value="AP">Amapá</option>
@@ -53,23 +57,24 @@
                 <option value="SP">São Paulo</option>
                 <option value="SE">Sergipe</option>
                 <option value="TO">Tocantins</option>
-            </select>
-            <br>
-            <p></p>
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" placeholder="Crie sua senha" required>
-<p>
-
-</p>
-            <div class= "button"> 
-                <button type=" submit"> Cadastrar </button>
+                </select>
             </div>
+
+            <div class="input-wrapper">
+                <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Crie sua senha" required="">
+
+            <button type="submit">Cadastre-se</button>
+        </form>
+
         
 
-    </form>
-<div class="container">
-    <img src="C:\Users\vitor\OneDrive\Área de Trabalho\PI\746edb14cfb2d74b08969ea24a1f3682.png" alt="">
-   <img src="C:\Users\vitor\OneDrive\Área de Trabalho\PI\cupcake.png" alt="Pi.html/cupcake.png">
+    </main>
+</div>
+
+<div class="imagem">
+    <img class="finn" src="./746edb14cfb2d74b08969ea24a1f3682.png" alt="" >
+    <img class="cupcake" src="./cupcake.png" alt="Pi.html/cupcake.png">
 </div>
 </body>
 </html>
