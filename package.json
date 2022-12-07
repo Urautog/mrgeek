@@ -20,6 +20,8 @@
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "nodemon": "^2.0.20"
+    "mssql": "^9.0.1",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.26.0"
   }
 }

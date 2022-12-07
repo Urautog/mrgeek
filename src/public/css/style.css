@@ -32,9 +32,12 @@ body {
 
 .banner {
   width: 100%;
+  height: auto;
 }
 
 .banner-img {
+  width: 100%;
+  height: 100%;
   max-width: 1280px;
 }
 
@@ -42,7 +45,7 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 1280px;
-  margin: 0px auto;
+  margin: 0px auto -25px auto;
   width: 100%;
 }
 
@@ -70,7 +73,7 @@ body {
 .navbar::before {
   content: "";
   background-color: #1ed08c;
-  height: 20px;
+  height: 30px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -78,7 +81,12 @@ body {
 }
 
 .navbar-brand {
+  
   z-index: 9999;
+}
+
+.navbar-brand img {
+  width: 100px;
 }
 
 .filtro-pedidos {
@@ -355,6 +363,10 @@ a {
   border-color: #1ed08c;
 }
 
+.btn-outline-success {
+  color: white;
+}
+
 form {
   display: block;
   margin-top: 0em;
@@ -367,6 +379,10 @@ form {
 
 .bg-light-pink {
   background-color: #ffd4f8;
+}
+
+.bg-green {
+  background-color: #1ed08c;
 }
 
 /* --------------- @MEDIA SCREEN --------------- */
