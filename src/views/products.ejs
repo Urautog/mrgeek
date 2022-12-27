@@ -33,10 +33,10 @@
       crossorigin="anonymous"
     ></script>
     <!--bot js-->
-    <link rel="stylesheet" href="../public/css/style.css" />
 
     <!-- CSS dos PRODUTOS -->
     <link rel="stylesheet" href="../public/css/global.css" />
+    <link rel="stylesheet" href="../public/css/products.css" />
     <!-- CSS dos PRODUTOS -->
 
     <meta charset="UTF-8" />
@@ -49,10 +49,6 @@
     <%- include("./partials/header") %>
 
     <main class="container">
-      <article class="title">
-        <h1><strong>PRODUTOS</strong></h1>
-      </article>
-
       <section>
         <div class="bloco">
           <ul class="topicos">
@@ -64,91 +60,16 @@
       </section>
 
       <section class="products">
+        <% products.forEach(product => {%>
         <article class="card-products">
-          <img src="../public/img/one.jpg" alt="" />
+          <img class="products-img" src="<%= product.image %>" alt="" />
           <div>
-            <span>Camisa Dragon Ball</span>
-            <h3><strong>R$ 50,00</strong></h3>
+            <span class="products-description"> <%= product.name %> </span>
           </div>
+          <h3><strong> <%=product.price%> </strong></h3>
           <button>Comprar</button>
         </article>
-
-        <article class="card-products">
-          <img src="../public/img/DBZ.jpeg" alt="" />
-          <div>
-            <span>Camisa Dragon Ball</span>
-            <h3><strong>R$ 50,00</strong></h3>
-          </div>
-          <button>Comprar</button>
-        </article>
-
-        <article class="card-products">
-          <img src="../public/img/Naruto.jpeg" alt="" />
-          <div>
-            <span>Camisa Dragon Ball</span>
-            <h3><strong>R$ 50,00</strong></h3>
-          </div>
-          <button>Comprar</button>
-        </article>
-      </section>
-
-      <section class="products">
-        <article class="card-products">
-          <img src="../public/img/DBZ.jpeg" alt="" />
-          <div>
-            <span>Camisa Dragon Ball</span>
-            <h3><strong>R$ 50,00</strong></h3>
-          </div>
-          <button>Comprar</button>
-        </article>
-
-        <article class="card-products">
-          <img src="../public/img/DBZ.jpeg" alt="" />
-          <div>
-            <span>Camisa Dragon Ball</span>
-            <h3><strong>R$ 50,00</strong></h3>
-          </div>
-          <button>Comprar</button>
-        </article>
-
-        <article class="card-products">
-          <img src="../public/img/DBZ.jpeg" alt="" />
-          <div>
-            <span>Camisa Dragon Ball</span>
-            <h3><strong>R$ 50,00</strong></h3>
-          </div>
-          <button>Comprar</button>
-        </article>
-      </section>
-
-      <section class="products">
-        <article class="card-products">
-          <img src="../public/img/DBZ.jpeg" alt="" />
-          <div>
-            <span>Camisa Dragon Ball</span>
-            <h3><strong>R$ 50,00</strong></h3>
-          </div>
-          <button>Comprar</button>
-        </article>
-
-        <article class="card-products">
-          <img src="../public/img/DBZ.jpeg" alt="" />
-          <div>
-            <span>Camisa Dragon Ball</span>
-            <h3><strong>R$ 50,00</strong></h3>
-          </div>
-          <button>Comprar</button>
-        </article>
-
-        <article class="card-products">
-          <img src="../public/img/DBZ.jpeg" alt="" />
-          <div>
-            <span>Camisa Dragon Ball</span>
-            <h3><strong>R$ 50,00</strong></h3>
-          </div>
-          <button>Comprar</button>
-        </article>
-      </section>
+        <% }) %>
 
       <section class="next-page">
         <nav aria-label="Page navigation example">

@@ -1,13 +1,10 @@
-ProductController = {
-  showAll: (req, res) => {},
+const database = require("../database/db.json");
 
-  showProduct: (req, res) => {},
-
-  newProduct: (req, res) => {},
-
-  updateProduct: (req, res) => {},
-
-  deleteProduct: (req, res) => {},
+const ProductsController = {
+  showAll: (req, res) => {
+    const products = database.products
+    res.render("products", {products});
+  },
 };
 
-module.exports = ProductController;
+module.exports = ProductsController;
