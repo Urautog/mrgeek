@@ -1,0 +1,61 @@
+:root{
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFD4F8;
+}
+
+.products-description{
+    margin-bottom: 15px;
+}
+.products h3{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 2.55rem;
+}
+.products-img{
+    height: 150px;
+    width: 150px;
+    align-self: center;
+}
+
+.title {
+    background-color: #0DB172;
+    width: 18rem;
+    height: 0.1rem;
+
+    border-radius: 1.3rem;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4rem 1rem 2rem 27rem;
+    padding: 4rem;
+
+}
+
+.bloco{
+    /* position:fixed; */
+    width: 15rem;
+    background: #D9D9D9;
+    border-radius: 2rem;
+    
+}
+
+.bloco li{
+    color: black;
+    padding: 4rem;
+    list-style: none;
+}
+
+
+

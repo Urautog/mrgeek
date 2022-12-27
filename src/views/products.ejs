@@ -33,10 +33,10 @@
       crossorigin="anonymous"
     ></script>
     <!--bot js-->
-    <link rel="stylesheet" href="../public/css/style.css" />
 
     <!-- CSS dos PRODUTOS -->
     <link rel="stylesheet" href="../public/css/global.css" />
+    <link rel="stylesheet" href="../public/css/products.css" />
     <!-- CSS dos PRODUTOS -->
 
     <meta charset="UTF-8" />
@@ -44,34 +44,45 @@
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Mr. Geek | Home</title>
   </head>
-  <body class="bg-dragon bg-light-pink">
+
+  <body>
     <%- include("./partials/header") %>
 
-    <main class="main-container">
-      <section class="container login-page">
-        <h1>LOGIN</h1>
-        <section class="login">
-          <section class="tela-login">
-            <form action="#">
-              <input type="email" name="email" id="" placeholder=" E-mail" />
-              <input type="password" name="senha" placeholder=" Senha" />
+    <main class="container">
+      <section>
+        <div class="bloco">
+          <ul class="topicos">
+            <li>CORES</li>
+            <li>TAMANHO</li>
+            <li>ESTILO</li>
+          </ul>
+        </div>
+      </section>
 
-              <div class="botoes">
-                <input
-                  class="btn-verde-animado"
-                  type="button"
-                  value="Cadastre-se"
-                />
-                <input
-                  class="btn-verde-animado"
-                  type="button"
-                  value="Esqueci minha senha"
-                />
-                <input class="btn-verde-animado" type="button" value="Entrar" />
-              </div>
-            </form>
-          </section>
-        </section>
+      <section class="products">
+        <% products.forEach(product => {%>
+        <article class="card-products">
+          <img class="products-img" src="<%= product.image %>" alt="" />
+          <div>
+            <span class="products-description"> <%= product.name %> </span>
+          </div>
+          <h3><strong> <%=product.price%> </strong></h3>
+          <button>Comprar</button>
+        </article>
+        <% }) %>
+
+      <section class="next-page">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
       </section>
     </main>
 
