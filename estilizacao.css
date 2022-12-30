@@ -7,13 +7,12 @@
 }
 
 .imagem {
-    display:flex;
+    display: flex;
     justify-content: space-between;
-}
+    width:  70rem;
+    align-content: flex-end;
 
-img {
-    width: 15%;
-    height: 15%;
+
 }
 
 
@@ -60,11 +59,13 @@ body {
         padding: 10px;
         transition: .3s all;
         border-radius: 20px;
+       
         }
 
         .cadastro button:hover {
             background-color: #0DB172;
             box-shadow: 2px 3px 3px 1px black;
+            
         }
         
         .input-wrapper {
@@ -142,9 +143,14 @@ body {
             padding: 10px;
         }
 
-        .cupcake{
-            background-image:url(./cupcake.png) ;
-            width: 10px;
-            padding-left: 1000px;
-            background-size: 100%;
+        .loading {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            z-index: 5;;
+            display: none;
+        }
+
+        .loading.active {
+            display: block;
         }
