@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../public/css/global.css">
+    <link rel="stylesheet" href="../public/css/finalizacaoPedido.css" />
+  </head>
+  <body>
+
+    <%- include("./partials/header") %>
+
+
+    <main class="container">
+      <h1>Finalização de Compra</h1>
+
+      <div class="box1P">
+        <div class="box-1">
+          <div class="entrega-cep">
+            <img src="../public/img/caminhao.svg" alt="" />
+            <h2>Endereço de entrega</h2>
+          </div>
+
+          <input
+            type="address"
+            name="cep"
+            id="Cep"
+            placeholder="CEP"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="boxpay">
+        <div class="pagamento">
+          <div class="title-pay">
+            <img src="../public/img/card.svg" alt="" />
+            <h2>Pagamento</h2>
+          </div>
+
+          <div>
+            <input
+              type="number"
+              id="number-card"
+              name="number-card"
+              placeholder="Número do cartão "
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="name-person"
+              placeholder="Nome impresso no cartão"
+              required
+            />
+          </div>
+          <div>
+            <input type="date" id="date-card" placeholder="MM/AA" required />
+          </div>
+          <div>
+            <input type="password" id="cod-card" placeholder="CVV" required />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="boxdes">
+        <div class="desconto">
+            <label for="cupomDesconto">Desconto:</label>
+            <input
+              type="text"
+              id="cupomDesconto"
+              name="cupomDesconto"
+              placeholder="Insira seu cupom"
+            />
+          </div>
+      </div>
+
+      <div class="total">
+        <div class="box-total">
+
+            <div class="subtotal">
+              <h3>Subtotal:</h3>
+    
+              <h3>Entrega:</h3>
+    
+              <h3>Total:</h3>
+            </div>
+
+
+            <div class="barra"></div>
+
+
+            <div class="avaliacao">
+              <img src="../public/img/avaliacao.svg" alt="">
+
+              <h2>Qualidade garantida Mr Geek </h2>
+
+              <img class="img2" src="../public/img/estrelas.svg" alt="">
+
+              <h3>
+                Somos a única marca de camisetas licenciada, com aprovação em todos
+                os selos! Temos o melhor tecido e mais de 99999999 avaliações com 5
+                estrelas.
+              </h3>
+            </div>
+
+        </div>
+      </div>
+
+
+      <div class="minion">
+        <img src="../public/img/minion.svg" alt="" />
+
+
+      </div>
+    </main>
+
+    <%- include("./partials/footer") %>
+
+  </body>
+</html>

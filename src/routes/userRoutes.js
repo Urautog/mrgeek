@@ -9,6 +9,6 @@ router.get("/meus-dados/:id", UserController.showUser);
 
 router.post("/cadastro/:id", UserController.createUser);
 
-router.delete("/admin/users/:id", UserController.deleteUser);
+router.delete("/admin/users/:id", UserController.deleteUser)
 
 module.exports = router;

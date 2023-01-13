@@ -62,7 +62,7 @@ body {
   justify-items: center;
 }
 
-.navbar::before {
+/* .navbar::before {
   content: "";
   background-color: #1ed08c;
   height: 30px;
@@ -79,7 +79,7 @@ body {
 
 .navbar-brand img {
   width: 100px;
-}
+} */
 
 .filtro-pedidos {
   align-self: flex-start;

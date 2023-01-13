@@ -11,4 +11,6 @@ router.get("/meus-pedidos", HomeController.showMeusPedidos);
 
 router.get("/favoritos", HomeController.showFavoritos);
 
+router.get("/finalizacaoPedido", HomeController.showFinalizacaoPedido);
+
 module.exports = router;
