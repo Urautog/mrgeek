@@ -62,25 +62,6 @@ body {
   justify-items: center;
 }
 
-.navbar::before {
-  content: "";
-  background-color: #1ed08c;
-  height: 30px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.navbar-brand {
-  
-  z-index: 9999;
-}
-
-.navbar-brand img {
-  width: 100px;
-}
-
 .filtro-pedidos {
   align-self: flex-start;
 }
@@ -175,7 +156,7 @@ img#adventure-time {
 .dados-pessoais form > input,
 .dados-pessoais form > select {
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 2rem;
   box-shadow: 5px 5px rgb(122, 112, 112);
   padding: 10px;
   width: 75%;
