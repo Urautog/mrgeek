@@ -21,15 +21,6 @@ body {
   background-size: 300px;
 }
 
-.main-container {
-  display: flex;
-  justify-content: center;
-  max-width: 1280px;
-  margin: 0px auto;
-  width: 100%;
-  padding-top: 15px;
-}
-
 .banner {
   width: 100%;
   height: auto;
@@ -62,7 +53,9 @@ body {
   justify-items: center;
 }
 
-.navbar::before {
+<<<<<<< HEAD
+=======
+/* .navbar::before {
   content: "";
   background-color: #1ed08c;
   height: 30px;
@@ -79,8 +72,9 @@ body {
 
 .navbar-brand img {
   width: 100px;
-}
+} */
 
+>>>>>>> 6ae06ceab570f631521c7d4d1f783f9d4d3be11a
 .filtro-pedidos {
   align-self: flex-start;
 }
@@ -175,7 +169,7 @@ img#adventure-time {
 .dados-pessoais form > input,
 .dados-pessoais form > select {
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 2rem;
   box-shadow: 5px 5px rgb(122, 112, 112);
   padding: 10px;
   width: 75%;

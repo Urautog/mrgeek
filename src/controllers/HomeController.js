@@ -11,6 +11,12 @@ const HomeController = {
   showFavoritos: (req, res) => {
     res.render("favoritos");
   },
+  showMeusDados: (req, res) => {
+    res.render("meus-dados");
+  },
+  showFinalizacaoPedido: (req, res) => {
+    res.render("finalizacao-pedido")
+  }
 };
 
 module.exports = HomeController;

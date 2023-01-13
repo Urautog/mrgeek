@@ -7,10 +7,16 @@
   font-size: 62.5%; /* 1rem = 10px */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-size: 2rem;
-  font-weight: 600;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -27,10 +33,12 @@ body {
 .main-container {
   display: flex;
   justify-content: center;
+
   max-width: 1280px;
   margin: 0px auto;
   width: 100%;
-  padding-top: 15px;
+
+  padding-top: 14rem;
 }
 
 .header-container {
@@ -44,13 +52,13 @@ body {
 .nav {
   color: white;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-between;
 
-  background-color: #0db172;
   width: 100%;
   height: 3rem;
 
+  z-index: 1000;
   position: fixed;
   right: 0;
   top: 0;
@@ -63,24 +71,10 @@ body {
   text-decoration: none;
 }
 
-.navbar::before {
-  content: "";
-  background-color: #1ed08c;
-  height: 20px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.navbar-brand {
-  z-index: 9999;
-}
-
-.navbar-brand img {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 10px;
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 a {
@@ -90,19 +84,18 @@ a {
 
 header {
   width: 100%;
-  background-color: #ff00c8;
 
   position: fixed;
   right: 0;
   top: 3rem;
   left: 0;
+
+  z-index: 1000;
 }
 
 header .container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-self: center;
+  margin: 0 auto;
 
   color: white;
   text-transform: uppercase;
@@ -113,9 +106,10 @@ header a {
 }
 
 header ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   align-items: center;
+  margin-bottom: 0;
 }
 
 .icons {
@@ -125,7 +119,20 @@ header ul {
 
 .ready,
 .standards {
-  margin-right: 10rem;
+  margin-right: 2rem;
+}
+
+.logo img {
+  display: flex;
+  position: absolute;
+
+  bottom: -1rem;
+
+  cursor: pointer;
+  height: 8rem;
+  margin-left: -60rem;
+
+  z-index: 999999;
 }
 
 main {
@@ -160,20 +167,6 @@ footer ul {
 
 footer ul li h2 {
   font-weight: 3rem;
-}
-
-.products {
-  width: 100%;
-  display: flex;
-  padding: 1.6rem;
-
-  margin-left: 10rem;
-
-  justify-content: center;
-
-  gap: 1.6rem;
-
-  flex-wrap: wrap;
 }
 
 .card-products {
@@ -211,7 +204,17 @@ main .card-products button {
 }
 
 .search-bar {
-  width: 200px;
+  border-radius: 50px;
+  font-size: 2rem;
+  /* padding: 10px; */
+  width: 40rem;
+}
+
+.search-box {
+  display: flex;
+  min-width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .products h2 {
@@ -241,4 +244,35 @@ main .card-products button {
 
 .bg-green {
   background-color: #1ed08c;
+}
+
+.bg-dark-green {
+  background-color: #0db172;
+}
+
+/* --------------- ICONS --------------- */
+.material-icons-outlined {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 34px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: black;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
 }
