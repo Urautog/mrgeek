@@ -14,6 +14,9 @@ const HomeController = {
   showMeusDados: (req, res) => {
     res.render("meus-dados");
   },
+  showFinalizacaoPedido: (req, res) => {
+    res.render("finalizacao-pedido")
+  }
 };
 
 module.exports = HomeController;

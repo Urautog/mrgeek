@@ -21,15 +21,6 @@ body {
   background-size: 300px;
 }
 
-.main-container {
-  display: flex;
-  justify-content: center;
-  max-width: 1280px;
-  margin: 0px auto;
-  width: 100%;
-  padding-top: 15px;
-}
-
 .banner {
   width: 100%;
   height: auto;
@@ -62,6 +53,28 @@ body {
   justify-items: center;
 }
 
+<<<<<<< HEAD
+=======
+/* .navbar::before {
+  content: "";
+  background-color: #1ed08c;
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbar-brand {
+  
+  z-index: 9999;
+}
+
+.navbar-brand img {
+  width: 100px;
+} */
+
+>>>>>>> 6ae06ceab570f631521c7d4d1f783f9d4d3be11a
 .filtro-pedidos {
   align-self: flex-start;
 }
