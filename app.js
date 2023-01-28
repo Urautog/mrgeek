@@ -4,6 +4,7 @@ const session = require("express-session");
 
 const homeRoutes = require("./src/routes/homeRoutes");
 const productRoutes = require("./src/routes/productRoutes");
+const adminRoutes = require("./src/routes/adminRoutes");
 
 const app = express();
 const port = 5000;
@@ -27,6 +28,7 @@ app.use(
 
 app.use(homeRoutes);
 app.use(productRoutes);
+app.use("/admin", adminRoutes);
 
 app.listen(port, () => {
   console.log(`Servidor rodando na porta: ${port}`);

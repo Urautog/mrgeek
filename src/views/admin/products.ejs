@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Admin | Produtos</title>
+  </head>
+  <body class="col-12 container-xxl" style="background-color: #ffd4f8;">
+    <%- include("../partials/navbar-adm") %>
+
+    <h1 class="text-center mb-3">Produtos</h1>
+
+    <a class="d-flex justify-content-center" href="/admin/create-product">
+      <button type="button" class="btn btn-primary mb-3">
+        Cadastrar produto
+      </button>
+    </a>
+
+    <!-- Modal Delete Button -->
+    <div
+      class="modal fade"
+      id="deleteBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="deleteBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="deleteBackdropLabel">
+              Excluir produto
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Deseja confirmar a exclusão do produto?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-danger">Excluir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Delete Button -->
+
+    <section>
+      <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome do produto</th>
+              <th scope="col">Imagem</th>
+              <th scope="col">Descrição do produto</th>
+              <th scope="col">Categoria</th>
+              <th scope="col">Estoque</th>
+              <th scope="col">Ativo</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider align-middle">
+            <% products.forEach(product => {%>
+            <tr>
+              <th scope="row"><%= product.id %></th>
+              <td><%=product.name%></td>
+              <td>
+                <img
+                  style="width: 100px; height: 100px"
+                  src="<%= product.image %>"
+                  alt="<%= product.name %>"
+                />
+              </td>
+              <td><%= product.description %></td>
+              <td><%= product.price %></td>
+              <!-- <td><%= product.category %></td> -->
+              <td>
+                <%= product.stock>0 ? "Qtd: " + product.stock : "Indisponível"
+                %>
+              </td>
+              <td><%= product.active ? "Ativo" : "Inativo" %></td>
+              <td>
+                <div>
+                    <form action="/admin/edit-product/<%=product.id%>">
+                  <button type="submit" class="btn btn-warning mb-2">
+                    Editar
+                  </button>
+                </form>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteBackdrop"
+                  >
+                    Excluir
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </body>
+</html>
