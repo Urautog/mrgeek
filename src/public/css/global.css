@@ -135,9 +135,9 @@ header ul {
   z-index: 999999;
 }
 
-main {
+/* main {
   margin: 15rem auto;
-}
+} */
 
 footer {
   display: flex;
@@ -232,6 +232,8 @@ main .card-products button {
 .next-page {
   margin: 0 0 0 100rem;
 }
+
+/* --------------- HAMBURGER MENU --------------- */
 
 /* --------------- CUSTOM COLORS --------------- */
 .bg-pink {

@@ -16,6 +16,9 @@ const HomeController = {
   },
   showFinalizacaoPedido: (req, res) => {
     res.render("finalizacao-pedido")
+  },
+  showCadastro: (req, res) => {
+    res.render("cadastro")
   }
 };
 

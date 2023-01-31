@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Admin | Editar Produto</title>
+  </head>
+  <body class="col-10 container-xl" style="background-color: #ffd4f8">
+    <%- include("../partials/navbar-adm") %>
+
+    <h1 class="text-center mb-3">Editar Produto</h1>
+
+    <!-- Modal Delete Button -->
+    <div
+      class="modal fade"
+      id="deleteBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="deleteBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="deleteBackdropLabel">
+              Excluir produto
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Deseja confirmar a exclusão do produto?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-danger">Excluir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Delete Button -->
+
+    <section class="d-flex justify-content-center">
+      <form class="col-10" action="/admin/create-product" method="POST">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Nome do produto"
+            value= "<%= product.name %>"
+          />
+          <label for="name">Nome do produto</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            name="price"
+            step="0.01"
+            placeholder="Estoque"
+            value= "<%= product.price %>"
+          />
+          <label for="price">Preço (R$)</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="file"
+            class="form-control"
+            id="image"
+            name="image"
+            placeholder="Imagem"
+            value= "<%= product.image %>"
+          />
+          <label for="image">Imagem</label>
+        </div>
+
+        <div class="mb-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected disabled>Selecione a categoria</option>
+            <option value="camiseta">Camiseta</option>
+            <option value="calca">Calça</option>
+            <option value="bone">Boné</option>
+            <option value="moletom">Moletom</option>
+          </select>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            class="form-control"
+            id="stock"
+            name="stock"
+            step="1"
+            placeholder="Estoque"
+            value= <%= product.stock %>
+          />
+          <label for="stock">Estoque</label>
+        </div>
+
+        <div class="form-check form-switch mb-3">
+          <input class="form-check-input" type="checkbox" role="switch"
+          id="active" <%= product.active ? "checked" : null %> />
+          <label class="form-check-label" for="active">Produto Ativo</label>
+        </div>
+
+        <div class="mb-3">
+          <textarea
+            name="description"
+            id="description"
+            cols="49"
+            rows="5"
+            placeholder="Descrição"
+          ><%= product.description %></textarea>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button class="btn" style="background-color: #1ed08c" type="button">
+            Salvar alterações
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-bs-toggle="modal"
+            data-bs-target="#deleteBackdrop"
+          >
+            Excluir
+          </button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

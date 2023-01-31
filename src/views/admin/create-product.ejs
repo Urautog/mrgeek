@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Admin | Cadastro Produto</title>
+  </head>
+  <body class="col-10 container-xl" style="background-color: #ffd4f8;">
+    <%- include("../partials/navbar-adm") %>
+
+    <h1 class="text-center mb-3">Cadastrar Produto</h1>
+
+    <section class="d-flex justify-content-center">
+      <form class="col-10" action="/admin/create-product" method="POST">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Nome do produto"
+          />
+          <label for="name">Nome do produto</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            name="price"
+            step="0.01"
+            placeholder="Preço"
+          />
+          <label for="price">Preço</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="file"
+            class="form-control"
+            id="image"
+            name="image"
+            placeholder="Imagem"
+          />
+          <label for="image">Imagem</label>
+        </div>
+
+        <div class="mb-3">
+          <!-- <input
+            type="text"
+            class="form-control"
+            id="category"
+            name="category  "
+            placeholder="Descrição"
+          />
+          <label for="category">Categoria</label> -->
+
+          <select class="form-select" aria-label="Default select example">
+            <option selected disabled>Selecione a categoria</option>
+            <option value="camiseta">Camiseta</option>
+            <option value="calca">Calça</option>
+            <option value="bone">Boné</option>
+            <option value="moletom">Moletom</option>
+          </select>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            class="form-control"
+            id="stock"
+            name="stock"
+            step="1"
+            placeholder="Estoque"
+          />
+          <label for="stock">Estoque</label>
+        </div>
+
+        <div class="form-check form-switch mb-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="active"
+            checked
+          />
+          <label class="form-check-label" for="active">Produto Ativo</label>
+        </div>
+
+        <div class="mb-3">
+          <textarea
+            name="description"
+            id="description"
+            cols="49"
+            rows="5"
+            placeholder="Descrição"
+          ></textarea>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn" style="background-color: #1ed08c;">Cadastrar</button>
+          <button type="reset" class="btn btn-danger">Limpar</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

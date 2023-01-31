@@ -189,7 +189,7 @@ img#adventure-time {
   border-radius: 50px;
   font-size: 1rem;
   padding: 10px;
-  width: 75%;
+  width: 100%;
   transition: 0.3s all;
   margin-top: 10px;
 }
@@ -271,7 +271,7 @@ img#adventure-time {
 
 .tela-login form > input {
   border-radius: 50px;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   box-shadow: 5px 5px rgb(122, 112, 112);
   padding: 10px;
   width: 80%;
@@ -351,6 +351,11 @@ a {
 form {
   display: block;
   margin-top: 0em;
+}
+
+.cadastre-se{
+  width: 100%;
+  text-align: center;
 }
 
 /* --------------- @MEDIA SCREEN --------------- */
