@@ -1,16 +1,40 @@
 const express = require("express");
-const UserController = require("../controllers/UserController");
-const isLogin = require("../middlewares/isLogin");
-const isAdmin = require("../middlewares/isAdmin");
-
 const router = express.Router();
+const { check } = require("express-validator");
+const isLogin = require("../middlewares/isLogin");
 
-router.get("/admin/users", UserController.showAll); //ADMIN
+const UserController = require("../controllers/UserController");
 
-router.get("/meus-dados/:id", UserController.showUser); 
+router.use(isLogin);
 
-router.post("/cadastro/:id", UserController.createUser); //ADMIN
+const validations = [
+  check("name").notEmpty().withMessage("O campo NOME não pode estar vazio!"),
+  check("email")
+    .notEmpty()
+    .withMessage("O campo EMAIL não pode estar vazio!")
+    .bail()
+    .isEmail()
+    .withMessage("Email inválido!"),
+  check("password")
+    .notEmpty()
+    .withMessage("O campo SENHA não pode estar vazio!")
+    .bail()
+    .isLength({ min: 8 })
+    .withMessage("A SENHA deve ter no mínimo 8 caracteres"),
+];
 
-router.delete("/admin/users/:id", UserController.deleteUser);
+router.get("/meus-pedidos", UserController.showMeusPedidos);
+
+router.get("/favoritos", UserController.showFavoritos);
+
+router.get("/meus-dados", UserController.showMeusDados);
+
+router.get("/users", UserController.getUsers);
+
+// router.post("/cadastro", UserController.createUser);
+
+// router.post("/cadastro", validations, UserController.createUser); Essa ROTA tem que ir pro auth
+
+// router.post("/cadastro", AuthController.store); //HOME
 
 module.exports = router;
