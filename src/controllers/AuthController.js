@@ -2,13 +2,21 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 
 const AuthController = {
+  showCadastro: (req, res) => {
+    res.render("cadastro");
+  },
+
+  showLogin: (req, res) => {
+    res.render("login");
+  },
+
   store: (req, res) => {
     const { name, email, password } = req.body;
 
     const verifyExists = User.findOne(email);
 
     if (verifyExists) {
-      return res.render("auth/cadastro", {
+      return res.render("cadastro", {
         error: "Não foi possivel realizar a operação",
       });
     }
@@ -19,20 +27,23 @@ const AuthController = {
 
     User.create(newUser);
 
-    return res.redirect("/login");
+    return res.redirect("/auth/login");
   },
 
   login: (req, res) => {
-    const {email,password} = req.body;
+    const { email, password } = req.body;
 
     const user = User.findOne(email);
     const verifyPassword = bcrypt.compareSync(password, user.password);
 
-    if(!user || verifyPassword){
-        
+    if (!user || !verifyPassword) {
+      return res.render("login", { error: "Email ou senha inválidos" });
     }
 
-  }
+    req.session.user = user;
+
+    return res.redirect("/");
+  },
 };
 
 module.exports = AuthController;

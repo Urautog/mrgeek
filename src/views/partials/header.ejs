@@ -40,10 +40,15 @@
           </a>
         </li>
         <li class="icons">
-          <a href="/login">
+          <a href="/auth/login">
             <span class="material-icons-outlined"> person </span>
           </a>
         </li>
+        <% if(locals.user && user) { %>
+        <li class="icons">
+          <span> Olá, <%= user.name %> </span>
+        </li>
+        <% } %>
       </ul>
     </div>
   </section>
