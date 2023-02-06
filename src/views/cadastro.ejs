@@ -52,10 +52,23 @@
           <h1>Cadastro</h1>
 
           <div class="input-wrapper">
-            <label for="name">Nome</label>
+            <label for="firstName">Nome</label>
             <input
               type="text"
-              name="name"
+              name="firstName"
+              id="name"
+              value="<%= locals.oldData ? oldData.name : null %>"
+            />
+          </div>
+          <% if(locals.errors && errors.name) { %>
+          <div style="color: red"><%= errors.name.msg %></div>
+          <%}%>
+          
+          <div class="input-wrapper">
+            <label for="lastName">Sobrenome</label>
+            <input
+              type="text"
+              name="lastName"
               id="name"
               value="<%= locals.oldData ? oldData.name : null %>"
             />

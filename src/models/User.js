@@ -29,24 +29,37 @@
 //   },
 // };
 
-module.exports = (sequelize, DataType) => {
+module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     "User",
     {
       user_id: {
-        type: DataType.STRING,
+        type: DataTypes.STRING,
         primaryKey: true,
       },
-      name: {
-        type: DataType.STRING,
+      firstName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      lastName: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
       email: {
-        type: DataType.STRING,
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      tel: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
       password: {
-        type: DataType.STRING,
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      isAdmin: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: 0,
         allowNull: false,
       },
     },

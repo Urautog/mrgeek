@@ -69,7 +69,7 @@
           />
           <label for="category">Categoria</label> -->
 
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select"  name="category" aria-label="Default select example">
             <option selected disabled>Selecione a categoria</option>
             <option value="camiseta">Camiseta</option>
             <option value="calca">Calça</option>
@@ -97,8 +97,10 @@
             role="switch"
             id="active"
             checked
+            value="false"
+            name="isActive"
           />
-          <label class="form-check-label" for="active">Produto Ativo</label>
+          <label class="form-check-label" name="isActive" for="active">Produto Ativo</label>
         </div>
 
         <div class="mb-3">

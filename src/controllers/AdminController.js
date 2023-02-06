@@ -1,4 +1,6 @@
 const database = require("../database/db.json");
+const { User } = require("../models");
+const { randomUUID } = require("crypto");
 
 const AdminController = {
   showCreateProduct: (req, res) => {
@@ -13,8 +15,8 @@ const AdminController = {
     const product = database.products.find((product) => product.id == id);
     res.render("admin/edit-product", { product });
   },
-  showAllUsers: (req, res) => {
-    const users = database.users;
+  showAllUsers: async (req, res) => {
+    const users = await User.findAll();
     res.render("admin/users", { users });
   },
 };
