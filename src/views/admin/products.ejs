@@ -77,6 +77,7 @@
               <th scope="col">Nome do produto</th>
               <th scope="col">Imagem</th>
               <th scope="col">Descrição do produto</th>
+              <th scope="col">Preço</th>
               <th scope="col">Categoria</th>
               <th scope="col">Estoque</th>
               <th scope="col">Ativo</th>
@@ -86,26 +87,26 @@
           <tbody class="table-group-divider align-middle">
             <% products.forEach(product => {%>
             <tr>
-              <th scope="row"><%= product.id %></th>
+              <th scope="row"><%= product.product_id %></th>
               <td><%=product.name%></td>
               <td>
                 <img
                   style="width: 100px; height: 100px"
-                  src="<%= product.image %>"
+                  src="../public/productsImages/<%= product.image %>"
                   alt="<%= product.name %>"
                 />
               </td>
               <td><%= product.description %></td>
               <td><%= product.price %></td>
-              <!-- <td><%= product.category %></td> -->
+              <td><%= product.category %></td>
               <td>
                 <%= product.stock>0 ? "Qtd: " + product.stock : "Indisponível"
                 %>
               </td>
-              <td><%= product.active ? "Ativo" : "Inativo" %></td>
+              <td><%= product.isActive ? "Ativo" : "Inativo" %></td>
               <td>
                 <div>
-                    <form action="/admin/edit-product/<%=product.id%>">
+                    <form action="/admin/edit-product/<%=product.product_id%>">
                   <button type="submit" class="btn btn-warning mb-2">
                     Editar
                   </button>

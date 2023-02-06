@@ -18,13 +18,19 @@
     ></script>
     <title>Admin | Cadastro Produto</title>
   </head>
-  <body class="col-10 container-xl" style="background-color: #ffd4f8;">
+  <body class="col-10 container-xl" style="background-color: #ffd4f8">
     <%- include("../partials/navbar-adm") %>
 
     <h1 class="text-center mb-3">Cadastrar Produto</h1>
 
     <section class="d-flex justify-content-center">
-      <form class="col-10" action="/admin/create-product" method="POST">
+      <form
+        class="col-10"
+        action="/admin/create-product"
+        method="POST"
+        enctype="multipart/form-data"
+        accept-charset="UTF-8"
+      >
         <div class="form-floating mb-3">
           <input
             type="text"
@@ -69,7 +75,11 @@
           />
           <label for="category">Categoria</label> -->
 
-          <select class="form-select"  name="category" aria-label="Default select example">
+          <select
+            class="form-select"
+            name="category"
+            aria-label="Default select example"
+          >
             <option selected disabled>Selecione a categoria</option>
             <option value="camiseta">Camiseta</option>
             <option value="calca">Calça</option>
@@ -100,7 +110,9 @@
             value="false"
             name="isActive"
           />
-          <label class="form-check-label" name="isActive" for="active">Produto Ativo</label>
+          <label class="form-check-label" name="isActive" for="active"
+            >Produto Ativo</label
+          >
         </div>
 
         <div class="mb-3">
@@ -114,7 +126,9 @@
         </div>
 
         <div class="d-grid gap-2">
-          <button type="submit" class="btn" style="background-color: #1ed08c;">Cadastrar</button>
+          <button type="submit" class="btn" style="background-color: #1ed08c">
+            Cadastrar
+          </button>
           <button type="reset" class="btn btn-danger">Limpar</button>
         </div>
       </form>

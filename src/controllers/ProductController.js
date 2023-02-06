@@ -12,12 +12,12 @@ const ProductsController = {
       if (req.body.isActive == "on") {
         var isActiveChecked = true;
       }
-      const { name, image, description, price, category, stock, isActive } =
-        req.body;
+      const { name, description, price, category, stock, isActive } = req.body;
+      const { filename } = req.file;
       await Product.create({
         product_id: randomUUID(),
         name,
-        image,
+        image: filename,
         description,
         price,
         category,

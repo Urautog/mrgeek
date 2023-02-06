@@ -1,6 +1,6 @@
 console.log ("Cadastro JS")
 
-const inputCep = document.querySelector('#Cep');
+const inputCep = document.querySelector('#zipcode');
 const inputEstado = document.querySelector ('#departments');
 const inputCidade = document.querySelector ('#Cidade');
 const inputRua = document.querySelector('#Rua');
