@@ -29,7 +29,8 @@ router.get("/favoritos", UserController.showFavoritos);
 
 router.get("/meus-dados", UserController.showMeusDados);
 
-router.get("/users", UserController.getUsers);
+router.post("/auth/cadastro", UserController.createUser)
+
 
 // router.post("/cadastro", UserController.createUser);
 

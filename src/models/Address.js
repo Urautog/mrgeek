@@ -1,50 +1,52 @@
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define(
-    "User",
+  const Address = sequelize.define(
+    "Address",
     {
-      user_id: {
+      address_id: {
         type: DataTypes.STRING,
         primaryKey: true,
       },
-      firstName: {
+      zipcode: {
+        type: DataTypes.STRING(8),
+        allowNull: false,
+      },
+      state: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      lastName: {
+      city: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        // unique: true,
-      },
-      tel: {
+      district: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      password: {
+      street: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      isAdmin: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: 0,
-        allowNull: false,
+      number: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      complement: {
+        type: DataTypes.STRING,
+        allowNull: true,
       },
     },
     {
-      tableName: "users",
+      tableName: "addresses",
       timestamps: false,
     }
   );
 
-  // User.associate = (models) => {
-  //   User.hasMany(models.Address, {
+  // Address.associate = (models) => {
+  //   Address.belongsTo(models.User, {
   //     foreignKey: "user_id",
-  //     as: "addresses",
+  //     as: "user",
   //   });
   // };
 
-  return User;
+  return Address;
 };

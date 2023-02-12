@@ -142,7 +142,7 @@ span,
   display: none;
 }
 
-.loading.active {
+.active {
   display: block;
 }
 

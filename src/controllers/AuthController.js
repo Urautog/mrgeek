@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const { User } = require("../models");
 const bcrypt = require("bcryptjs");
 
 const AuthController = {
@@ -10,30 +10,30 @@ const AuthController = {
     res.render("login");
   },
 
-  store: (req, res) => {
-    const { name, email, password } = req.body;
+  // store: (req, res) => {
+  //   const { name, email, password } = req.body;
 
-    const verifyExists = User.findOne(email);
+  //   const verifyExists = User.findOne( {where: { email: email } } );
 
-    if (verifyExists) {
-      return res.render("cadastro", {
-        error: "Não foi possivel realizar a operação",
-      });
-    }
+  //   if (!verifyExists) {
+  //     return res.render("cadastro", {
+  //       error: "Não foi possivel realizar a operação",
+  //     });
+  //   }
 
-    const hash = bcrypt.hashSync(password, 10);
+  //   const hash = bcrypt.hashSync(password, 10);
 
-    const newUser = { name, email, hash };
+  //   const newUser = { name, email, hash };
 
-    User.create(newUser);
+  //   User.create(newUser);
 
-    return res.redirect("/auth/login");
-  },
+  //   return res.redirect("/auth/login");
+  // },
 
-  login: (req, res) => {
+  login: async (req, res) => {
     const { email, password } = req.body;
 
-    const user = User.findOne(email);
+    const user = await User.findOne({where: { email: email } });
     const verifyPassword = bcrypt.compareSync(password, user.password);
 
     if (!user || !verifyPassword) {

@@ -69,16 +69,20 @@
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Nome</th>
+              <th scope="col">Sobrenome</th>
               <th scope="col">Email</th>
+              <th scope="col">Telefone</th>
               <th scope="col">Admin</th>
             </tr>
           </thead>
           <tbody class="table-group-divider align-middle">
             <% users.forEach(user => {%>
             <tr>
-              <th scope="row"><%= user.id %></th>
-              <td><%=user.name%></td>
+              <th scope="row"><%= user.user_id %></th>
+              <td><%=user.firstName%></td>
+              <td><%=user.lastName%></td>
               <td><%= user.email %></td>
+              <td><%= user.tel %></td>
               <td><%= user.isAdmin ? "Sim" : "Não" %></td>
               <td>
                 <div>
