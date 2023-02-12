@@ -1,18 +1,19 @@
-// const database = require("../database/db.json");
-const { User, Product } = require("../models");
-const { randomUUID } = require("crypto");
+const { User, Product, Category } = require("../models");
 
 const AdminController = {
-  showCreateProduct: (req, res) => {
-    res.render("admin/create-product");
+  showCreateProduct: async (req, res) => {
+    const categories = await Category.findAll();
+    res.render("admin/create-product", { categories });
   },
   showAllProducts: async (req, res) => {
-    const products = await Product.findAll();
+    const products = await Product.findAll({
+      include: [{ association: "category" }],
+    });
+    console.log(products);
     res.render("admin/products", { products });
   },
   showEditProduct: async (req, res) => {
     const { id } = req.params;
-    console.log(id)
     const product = await Product.findByPk(id);
     res.render("admin/edit-product", { product });
   },

@@ -1,5 +1,5 @@
 const database = require("../database/db.json");
-const { Product } = require("../models");
+const { Product, Category } = require("../models");
 const { randomUUID } = require("crypto");
 
 const ProductsController = {
@@ -20,9 +20,12 @@ const ProductsController = {
         image: filename,
         description,
         price,
-        category,
+        category_id: category,
         stock,
         isActive: isActiveChecked,
+      });
+      await Category.create({
+        category,
       });
       res.redirect("/admin/products");
     } else {

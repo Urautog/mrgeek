@@ -18,12 +18,12 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      // category_id: {
+      //   type: DataTypes.INTEGER,
+      //   foreignKey: true,
+      // },
       price: {
         type: DataTypes.FLOAT(5, 2),
-        allowNull: false,
-      },
-      category: {
-        type: DataTypes.STRING,
         allowNull: false,
       },
       stock: {
@@ -41,6 +41,21 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );
+
+  Product.associate = (models) => {
+    Product.belongsTo(models.Category, {
+      foreignKey: "category_id",
+      as: "category",
+    });
+
+    Product.belongsToMany(models.Order, {
+      as: "orders",
+      through: "OrderItens",
+      foreignKey: "order_id",
+      otherKey: "product_id",
+       timestamps: false,
+    });
+  };
 
   return Product;
 };

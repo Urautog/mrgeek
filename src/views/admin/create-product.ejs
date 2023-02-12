@@ -66,25 +66,15 @@
         </div>
 
         <div class="mb-3">
-          <!-- <input
-            type="text"
-            class="form-control"
-            id="category"
-            name="category  "
-            placeholder="Descrição"
-          />
-          <label for="category">Categoria</label> -->
-
           <select
             class="form-select"
             name="category"
             aria-label="Default select example"
           >
             <option selected disabled>Selecione a categoria</option>
-            <option value="camiseta">Camiseta</option>
-            <option value="calca">Calça</option>
-            <option value="bone">Boné</option>
-            <option value="moletom">Moletom</option>
+            <% categories.forEach(category => { %>
+            <option value="<%=category.category_id%>"><%=category.name%></option>
+            <% }) %>
           </select>
         </div>
 

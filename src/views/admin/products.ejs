@@ -98,7 +98,7 @@
               </td>
               <td><%= product.description %></td>
               <td><%= product.price %></td>
-              <td><%= product.category %></td>
+              <td><%= product.category.name %></td>
               <td>
                 <%= product.stock>0 ? "Qtd: " + product.stock : "Indisponível"
                 %>
